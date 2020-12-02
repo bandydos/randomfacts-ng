@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  name = 'Alexander';
   title = 'randomfacts-ng';
+
+  constructor() {
+    console.log(this.name);
+  }
 }
