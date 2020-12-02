@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FactService } from '../../services/fact.service';
+
 
 import { FactModel } from '../../models/FactModel';
 
@@ -10,23 +12,9 @@ import { FactModel } from '../../models/FactModel';
 export class FactsComponent implements OnInit {
 
   facts: FactModel[] = [];
-  constructor() { }
+  constructor(private factService: FactService) { }
 
   ngOnInit(): void {
-    this.facts = [
-      {
-        id: 1,
-        title: 'Steak is delicious',
-      },
-      {
-        id: 2,
-        title: 'Fries are delicious',
-      },
-      {
-        id: 3,
-        title: 'Salad is delicious',
-      },
-    ];
+    this.facts = this.factService.getFacts();
   }
-
 }
