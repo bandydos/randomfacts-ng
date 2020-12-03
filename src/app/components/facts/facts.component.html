@@ -1,2 +1,9 @@
-<app-fact *ngFor="let fact of facts" [fact]="fact.fact">
-</app-fact>
+<table class="table table-bordered table-hover">
+    <thead class="bg-info text-white">
+        <th>FACTS</th>
+    </thead>
+    <tbody>
+        <app-fact *ngFor="let fact of facts" [fact]="fact.fact">
+        </app-fact>
+    </tbody>
+</table>
