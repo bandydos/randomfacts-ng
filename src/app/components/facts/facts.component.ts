@@ -11,14 +11,13 @@ import { FactModel } from '../../models/FactModel';
 })
 export class FactsComponent implements OnInit {
 
-  facts: FactModel;
+  facts: FactModel[];
 
   constructor(private factService: FactService) { }
 
   ngOnInit(): void {
     this.factService.getFacts().subscribe(response => {
       this.facts = response.data;
-      console.log(response.data);
     });
   }
 }
