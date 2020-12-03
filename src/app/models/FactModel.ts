@@ -1,4 +1,4 @@
 export class FactModel {
-    id: number;
-    title: string;
+    fact: string;
+    length: number;
 }
