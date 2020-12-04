@@ -1,9 +1,4 @@
-<table class="table table-bordered table-hover">
-    <thead class="bg-info text-white">
-        <th>FACTS</th>
-    </thead>
-    <tbody>
-        <app-fact *ngFor="let fact of facts" [fact]="fact.fact">
-        </app-fact>
-    </tbody>
-</table>
+<div>
+    <app-fact *ngFor="let fact of facts; index as i" [fact]="fact.fact" [length]="fact.length" [listindex]="i + 1">
+    </app-fact>
+</div>

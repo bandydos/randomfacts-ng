@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { FactModel } from 'src/app/models/FactModel';
 
 @Component({
@@ -7,12 +7,13 @@ import { FactModel } from 'src/app/models/FactModel';
   styleUrls: ['./fact.component.css']
 })
 export class FactComponent implements OnInit {
-  @Input() fact: FactModel;
+  @Input() fact: string;
+  @Input() length: number;
+  @Input() listindex: number;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.fact);
   }
 
 }

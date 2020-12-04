@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FactsComponent } from './components/facts/facts.component';
 import { FactComponent } from './components/fact/fact.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FactComponent } from './components/fact/fact.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     NgbModule,
     RouterModule,
