@@ -16,19 +16,19 @@ export class FactdetailComponent implements OnInit {
   private sub: any;
 
   constructor(private location: Location,
-    private route: ActivatedRoute,
-    private factService: FactService) { }
+              private route: ActivatedRoute,
+              private factService: FactService) { }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
-      this.id = parseInt(params.id, 10);
+      this.id = parseInt(params.id, 10); // Parse as decimal.
       this.factService.getFacts().subscribe(response => {
-        this.fact = response.data[this.id];
+        this.fact = response.data[this.id]; // Set fact to response.data at [id].
       });
     });
   }
 
   backClicked(): void {
-    this.location.back();
+    this.location.back(); // Go back (without refreshing).
   }
 }
