@@ -23,7 +23,7 @@ export class FactsComponent implements OnInit {
   }
 
   onDetail(i: number, f: FactModel): void {
-    const id = i + 1;
-    this.router.navigate(['/factdetail', id]);
+    f.id = i + 1;
+    this.router.navigate(['/factdetail', f.id]);
   }
 }
