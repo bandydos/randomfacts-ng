@@ -24,6 +24,6 @@ export class FactsComponent implements OnInit {
 
   onDetail(i: number, f: FactModel): void {
     f.id = i + 1;
-    this.router.navigate(['/factdetail', f.id]);
+    this.router.navigate(['/factdetail', f.id, f]);
   }
 }
