@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FactModel } from 'src/app/models/FactModel';
 
 @Component({
@@ -14,6 +14,10 @@ export class FactComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  seedetail(): void {
+    console.log('clicked')
   }
 
 }
