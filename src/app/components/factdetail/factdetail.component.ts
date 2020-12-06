@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { FactModel } from 'src/app/models/FactModel';
+import { FactService } from 'src/app/services/fact.service';
 
 
 @Component({
@@ -14,12 +15,16 @@ export class FactdetailComponent implements OnInit {
   fact: FactModel;
   private sub: any;
 
-  constructor(private location: Location, private route: ActivatedRoute) { }
+  constructor(private location: Location,
+    private route: ActivatedRoute,
+    private factService: FactService) { }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
       this.id = parseInt(params.id, 10);
-      this.fact = params.fact;
+      this.factService.getFacts().subscribe(response => {
+        this.fact = response.data[this.id];
+      });
     });
   }
 

@@ -11,16 +11,8 @@ export class FactComponent implements OnInit {
   @Input() length: number;
   @Input() listindex: number;
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-
-  seedetail(): void {
-    //this.router.navigate(['/factdetail']);
-
-
-    console.log('clicked' + this.listindex);
-  }
-
 }

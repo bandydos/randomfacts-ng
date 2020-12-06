@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FactService } from '../../services/fact.service';
 import { Router } from '@angular/router';
-
-
 import { FactModel } from '../../models/FactModel';
 
 @Component({
@@ -23,7 +21,7 @@ export class FactsComponent implements OnInit {
   }
 
   onDetail(i: number, f: FactModel): void {
-    f.id = i + 1;
-    this.router.navigate(['/factdetail', f.id, f]);
+    f.id = i;
+    this.router.navigate(['/factdetail', f.id]);
   }
 }
