@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FactModel } from 'src/app/models/FactModel';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fact',
@@ -11,13 +11,16 @@ export class FactComponent implements OnInit {
   @Input() length: number;
   @Input() listindex: number;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   seedetail(): void {
-    console.log('clicked')
+    //this.router.navigate(['/factdetail']);
+
+
+    console.log('clicked' + this.listindex);
   }
 
 }

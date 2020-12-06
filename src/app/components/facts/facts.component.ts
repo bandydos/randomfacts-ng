@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FactService } from '../../services/fact.service';
+import { Router } from '@angular/router';
 
 
 import { FactModel } from '../../models/FactModel';
@@ -13,11 +14,16 @@ export class FactsComponent implements OnInit {
 
   facts: FactModel[];
 
-  constructor(private factService: FactService) { }
+  constructor(private factService: FactService, private router: Router) { }
 
   ngOnInit(): void {
     this.factService.getFacts().subscribe(response => {
       this.facts = response.data;
     });
+  }
+
+  onDetail(i: number, f: FactModel): void {
+    const id = i + 1;
+    this.router.navigate(['/factdetail', id]);
   }
 }
