@@ -9,12 +9,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FactsComponent } from './components/facts/facts.component';
 import { FactComponent } from './components/fact/fact.component';
 import { CommonModule } from '@angular/common';
+import { FactdetailComponent } from './components/factdetail/factdetail.component';
+import { HomeComponent } from './components/home/home.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FactsComponent,
-    FactComponent
+    FactComponent,
+    FactdetailComponent,
+    HomeComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
