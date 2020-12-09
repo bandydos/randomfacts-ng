@@ -8,7 +8,7 @@ import { RequestModel } from '../models/RequestModel';
 })
 
 export class FactService {
-  factsUrl = 'https://catfact.ninja/facts?limit=4&max_length=1000';
+  factsUrl = 'https://catfact.ninja/facts?limit=3&max_length=1000';
   facts: RequestModel;
 
   constructor(private http: HttpClient) { }

@@ -9,7 +9,6 @@ import { FactModel } from '../../models/FactModel';
   styleUrls: ['./facts.component.css']
 })
 export class FactsComponent implements OnInit {
-
   facts: FactModel[];
 
   constructor(private factService: FactService, private router: Router) { }
@@ -23,5 +22,9 @@ export class FactsComponent implements OnInit {
   onDetail(i: number, f: FactModel): void {
     f.id = i;
     this.router.navigate(['/factdetail', f.id]);
+  }
+
+  onRefresh(): void {
+    window.location.reload(); // Pure js reload.
   }
 }
